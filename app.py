@@ -193,35 +193,26 @@ def filter_df(
 
 
 # -------------------------
-# DATA LOAD + MERGE USING ID
+# Data load (NO UPLOAD)
 # -------------------------
+# Import your two files directly
+df1 = pd.read_csv("data1.csv")  # first part
+df2 = pd.read_csv("data2.csv")  # second part
 
-st.subheader("Upload 2 files to merge using ID")
-
-file1 = st.file_uploader("Upload File 1", type=["csv"], key="f1")
-file2 = st.file_uploader("Upload File 2", type=["csv"], key="f2")
-
-if file1 and file2:
-    df1 = pd.read_csv(file1)
-    df2 = pd.read_csv(file2)
-
-    if "ID" not in df1.columns or "ID" not in df2.columns:
-        st.error("❌ Both files must contain an 'ID' column.")
-        st.stop()
-
-    # 1) Merge on ID
-    df_active = pd.merge(df1, df2, on="ID", how="inner")
-
-    # 2) Drop the ID field
-    df_active = df_active.drop(columns=["ID"])
-
-    st.success(
-        f"✔ Merge successful. Final rows: {len(df_active)} ; Columns: {len(df_active.columns)}"
-    )
-
-else:
-    st.warning("Please upload both files to generate the merged dataset.")
+# Check if ID exists
+if "ID" not in df1.columns or "ID" not in df2.columns:
+    st.error("❌ Both data1.csv and data2.csv must contain an 'ID' column.")
     st.stop()
+
+# 1) Merge using ID
+df_active = pd.merge(df1, df2, on="ID", how="inner")
+
+# 2) Drop ID column
+df_active = df_active.drop(columns=["ID"])
+
+st.success(
+    f"✔ Merge successful → Final rows: {len(df_active)} | Columns: {len(df_active.columns)}"
+)
 
 st.markdown("---")
 
