@@ -196,9 +196,7 @@ def filter_df(
 # Data load (NO UPLOAD)
 # -------------------------
 try:
-    df_active = pd.read_csv(
-        "https://huggingface.co/datasets/Roj12/blo_db/resolve/main/data.csv"
-    )
+    df_active = pd.read_csv("data.csv")
 except FileNotFoundError:
     st.error(
         "`data.csv` not found in the working directory. Place the file next to this script and rerun."
