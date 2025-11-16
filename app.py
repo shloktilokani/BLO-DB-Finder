@@ -193,16 +193,34 @@ def filter_df(
 
 
 # -------------------------
-# Data load (NO UPLOAD)
+# DATA LOAD + MERGE USING ID
 # -------------------------
-try:
-    df_active = pd.read_csv(
-        "https://huggingface.co/datasets/Roj12/blo_db/resolve/main/data.csv"
+
+st.subheader("Upload 2 files to merge using ID")
+
+file1 = st.file_uploader("Upload File 1", type=["csv"], key="f1")
+file2 = st.file_uploader("Upload File 2", type=["csv"], key="f2")
+
+if file1 and file2:
+    df1 = pd.read_csv(file1)
+    df2 = pd.read_csv(file2)
+
+    if "ID" not in df1.columns or "ID" not in df2.columns:
+        st.error("❌ Both files must contain an 'ID' column.")
+        st.stop()
+
+    # 1) Merge on ID
+    df_active = pd.merge(df1, df2, on="ID", how="inner")
+
+    # 2) Drop the ID field
+    df_active = df_active.drop(columns=["ID"])
+
+    st.success(
+        f"✔ Merge successful. Final rows: {len(df_active)} ; Columns: {len(df_active.columns)}"
     )
-except FileNotFoundError:
-    st.error(
-        "`data.csv` not found in the working directory. Place the file next to this script and rerun."
-    )
+
+else:
+    st.warning("Please upload both files to generate the merged dataset.")
     st.stop()
 
 st.markdown("---")
