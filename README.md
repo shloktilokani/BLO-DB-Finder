@@ -4,7 +4,7 @@
 
 ### 👨‍🎓 Developer
 
-- **Shlok Tilokani** (MBA IT — DA)
+- **Shlok Tilokani**
 
 ---
 
