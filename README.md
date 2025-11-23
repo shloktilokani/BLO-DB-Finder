@@ -5,7 +5,7 @@
 ### Mobile View
 
 <!-- markdownlint-disable MD033 -->
-<img src="res/mobile_view.gif" alt="Mobile View" height="400">
+<img src="res/mobile_view.gif" alt="Mobile View" height="500">
 <!-- markdownlint-enable MD033 -->
 
 ### PC View
