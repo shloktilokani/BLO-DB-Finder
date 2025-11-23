@@ -2,10 +2,6 @@
 
 ## 📘 Mobile-Friendly Solution for BLO Record Search
 
-### 👨‍🎓 Developer
-
-- **Shlok Tilokani**
-
 ---
 
 ## 🔍 Project Overview
