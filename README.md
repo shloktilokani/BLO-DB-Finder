@@ -2,6 +2,16 @@
 
 ## 📘 Mobile-Friendly Solution for BLO Record Search
 
+### Mobile View
+
+<!-- markdownlint-disable MD033 -->
+<img src="res/mobile_view.gif" alt="Mobile View" height="400">
+<!-- markdownlint-enable MD033 -->
+
+### PC View
+
+![PC View](res/pc_video.gif)
+
 ---
 
 ## 🔍 Project Overview
