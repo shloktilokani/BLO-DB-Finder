@@ -1,16 +1,40 @@
 # 🗂️ BLO Database Finder — Python + Streamlit Web App
 
-## 📘 Mobile-Friendly Solution for BLO Record Search
+<!-- ## 📘 Mobile-Friendly Solution for BLO Record Search -->
 
-### Mobile View
+![Video Demo](res/Combined_view.gif)
 
-<!-- markdownlint-disable MD033 -->
-<img src="res/mobile_view.gif" alt="Mobile View" height="500">
-<!-- markdownlint-enable MD033 -->
+---
 
-### PC View
+## 📄 **Special Intensive Revision (SIR) — Core Context of This Project**
 
-![PC View](res/pc_video.gif)
+The **Special Intensive Revision (SIR) Form** is the foundation of this project.  
+It is an official enumeration document used by the **Election Commission of India (ECI)** during their **house-to-house verification drive** for updating and correcting electoral rolls.
+
+### 🔹 What the SIR Form Is
+
+A verification form issued by **Booth Level Officers (BLOs)** during field visits, and also available online. It helps citizens:
+
+- Verify their voter details  
+- Update incorrect entries  
+- Enroll if missing from the voter list  
+
+### 🔹 Purpose of the SIR Drive
+
+The SIR process aims to:
+
+- Clean and update the electoral database  
+- Remove **duplicate**, **deceased**, or **shifted** voters  
+- Ensure all eligible citizens are included  
+
+### 🔹 Why It Matters
+
+Accurate electoral rolls are the backbone of **free and fair elections**.  
+The SIR exercise ensures correctness, completeness, and inclusivity in the voter list.
+
+### 🔹 Citizen Access
+
+Citizens can typically complete verification through the **ECI Voters’ Service Portal**.
 
 ---
 
