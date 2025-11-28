@@ -4,7 +4,7 @@
 
 ![Video Demo](res/Combined_view.gif)
 
----
+<!-- --- -->
 
 ## 📄 **Special Intensive Revision (SIR) — Core Context of This Project**
 
